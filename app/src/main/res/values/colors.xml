@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#68bef1</color>
+    <color name="colorPrimaryDark">#2690D0</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="but_press_rasx">#FF0000</color>
+    <color name="but_not_press_rasx">#40FF0000</color>
+    <color name="but_not_press_dox">#40008000</color>
+    <color name="but_press_dox">#008000</color>
 </resources>

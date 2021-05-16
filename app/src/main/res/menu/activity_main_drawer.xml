@@ -1,20 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/menu_home"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_stat"
+            android:icon="@drawable/menu_chart"
+            android:title="@string/menu_stat" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_bill"
+            android:icon="@drawable/menu_account"
+            android:title="@string/menu_bill" />
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_goal"
+            android:icon="@drawable/menu_goal"
+            android:title="@string/menu_goal" />
+        <item
+            android:id="@+id/nav_debt"
+            android:icon="@drawable/menu_debt"
+            android:title="@string/menu_debt" />
+        <item
+            android:id="@+id/nav_shop"
+            android:icon="@drawable/menu_shop"
+            android:title="@string/menu_shop" />
     </group>
 </menu>

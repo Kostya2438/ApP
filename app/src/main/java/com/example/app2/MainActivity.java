@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.TextUtils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -26,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try {
                     TimeUnit.SECONDS.sleep(3);
-                    boolean hasVisited = sp.getBoolean("hasVisited", false);
-                    if (!hasVisited) {
+                    boolean hasVisited = sp.getBoolean("hasVisited", true);
+                    if (hasVisited) {
                         Intent intent2 = new Intent(MainActivity.this, Startscreen.class);
                         startActivity(intent2);
                         SharedPreferences.Editor e = sp.edit();
                         if (sharedPrefs.getBoolean("hasVisited",false)) {
-                            e.putBoolean("hasVisited", true);
+                            e.putBoolean("hasVisited", false);
                             e.commit();
                         }
                     }

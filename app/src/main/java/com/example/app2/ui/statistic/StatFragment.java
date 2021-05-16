@@ -1,4 +1,4 @@
-package com.example.app2.ui.gallery;
+package com.example.app2.ui.statistic;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,15 +14,15 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.app2.R;
 
-public class GalleryFragment extends Fragment {
+public class StatFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
+    private StatViewModel galleryViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+                ViewModelProviders.of(this).get(StatViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_stat, container, false);
         final TextView textView = root.findViewById(R.id.text_gallery);
         galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override

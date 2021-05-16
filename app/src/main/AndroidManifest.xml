@@ -23,9 +23,6 @@
         <activity
             android:name=".Startscreen"
             android:label="Startscreen"></activity>
-        <activity
-            android:name=".Main_menu"
-            android:label="Main_menu"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

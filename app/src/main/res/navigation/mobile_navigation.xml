@@ -12,14 +12,32 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.app2.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_stat"
+        android:name="com.example.app2.ui.statistic.StatFragment"
+        android:label="@string/menu_stat"
+        tools:layout="@layout/fragment_stat" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.app2.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_bill"
+        android:name="com.example.app2.ui.bill.BillFragment"
+        android:label="@string/menu_bill"
+        tools:layout="@layout/fragment_bill" />
+
+    <fragment
+        android:id="@+id/nav_goal"
+        android:name="com.example.app2.ui.goal.GoalFragment"
+        android:label="@string/menu_goal"
+        tools:layout="@layout/fragment_goal" />
+
+    <fragment
+        android:id="@+id/nav_debt"
+        android:name="com.example.app2.ui.debt.DebtFragment"
+        android:label="@string/menu_debt"
+        tools:layout="@layout/fragment_debt" />
+
+    <fragment
+        android:id="@+id/nav_shop"
+        android:name="com.example.app2.ui.shop.ShopFragment"
+        android:label="@string/menu_shop"
+        tools:layout="@layout/fragment_shop" />
 </navigation>
