@@ -26,14 +26,14 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     TimeUnit.SECONDS.sleep(3);
                     boolean hasVisited = sp.getBoolean("hasVisited", true);
-                    if (hasVisited) {
-                        Intent intent2 = new Intent(MainActivity.this, Startscreen.class);
-                        startActivity(intent2);
+                    if (!hasVisited) {
                         SharedPreferences.Editor e = sp.edit();
-                        if (sharedPrefs.getBoolean("hasVisited",false)) {
-                            e.putBoolean("hasVisited", false);
+                        if (!sharedPrefs.getBoolean("hasVisited",true)) {
+                            e.putBoolean("hasVisited", true);
                             e.commit();
                         }
+                        Intent intent2 = new Intent(MainActivity.this, Startscreen.class);
+                        startActivity(intent2);
                     }
                     else{
                         Intent intent_main = new Intent(MainActivity.this, MAINMENU.class);
