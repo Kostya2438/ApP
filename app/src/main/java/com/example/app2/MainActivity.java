@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
     public static final String APP_PREFERENCES = "mysettings";
     private SharedPreferences sharedPrefs;
-    SharedPreferences.Editor ed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

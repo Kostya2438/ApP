@@ -23,6 +23,9 @@
         <activity
             android:name=".Startscreen"
             android:label="Startscreen"></activity>
+        <activity
+            android:name=".AddEntry"
+            android:label="AddEntry"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

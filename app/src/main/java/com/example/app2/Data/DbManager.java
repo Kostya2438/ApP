@@ -159,16 +159,6 @@ public class DbManager {
         cursor.close();
         return templist;
     }
-    public List<Integer> getFromDbSum() {
-        List<Integer> templist = new ArrayList<>();
-        Cursor cursor = db.rawQuery("SELECT SUM(food) as food FROM " + constant.Table_Name, null);
-        while (cursor.moveToNext()) {
-                int title = cursor.getInt(cursor.getColumnIndex(constant.FOOD));
-                templist.add(title);
-        }
-        cursor.close();
-        return templist;
-    }
     public int getFromDbSumRasxod() {
         int value = 0;
         Cursor cursor = db.rawQuery("SELECT SUM(sum_ras) as sum_ras FROM " + constant.Table_Name, null);
@@ -194,6 +184,126 @@ public class DbManager {
         Cursor cursor = db.rawQuery("SELECT SUM(sum_all) as sum_all FROM " + constant.Table_Name, null);
         while (cursor.moveToNext()) {
             int title = cursor.getInt(cursor.getColumnIndex(constant.SUM_ALL));
+            value = title;
+        }
+        cursor.close();
+        return value;
+    }
+    public int getFromDbSumFood() {
+        int value = 0;
+        Cursor cursor = db.rawQuery("SELECT SUM(food) as food FROM " + constant.Table_Name, null);
+        while (cursor.moveToNext()) {
+            int title = cursor.getInt(cursor.getColumnIndex(constant.FOOD));
+            value = title;
+        }
+        cursor.close();
+        return value;
+    }
+    public int getFromDbSumShopping() {
+        int value = 0;
+        Cursor cursor = db.rawQuery("SELECT SUM(shopping) as shopping FROM " + constant.Table_Name, null);
+        while (cursor.moveToNext()) {
+            int title = cursor.getInt(cursor.getColumnIndex(constant.SHOPPING));
+            value = title;
+        }
+        cursor.close();
+        return value;
+    }
+    public int getFromDbSumProducts() {
+        int value = 0;
+        Cursor cursor = db.rawQuery("SELECT SUM(products) as products FROM " + constant.Table_Name, null);
+        while (cursor.moveToNext()) {
+            int title = cursor.getInt(cursor.getColumnIndex(constant.PRODUCTS));
+            value = title;
+        }
+        cursor.close();
+        return value;
+    }
+    public int getFromDbSumTransport() {
+        int value = 0;
+        Cursor cursor = db.rawQuery("SELECT SUM(transport) as transport FROM " + constant.Table_Name, null);
+        while (cursor.moveToNext()) {
+            int title = cursor.getInt(cursor.getColumnIndex(constant.TRANSPORT));
+            value = title;
+        }
+        cursor.close();
+        return value;
+    }
+    public int getFromDbSumEntertainments() {
+        int value = 0;
+        Cursor cursor = db.rawQuery("SELECT SUM(entertainments) as entertainments FROM " + constant.Table_Name, null);
+        while (cursor.moveToNext()) {
+            int title = cursor.getInt(cursor.getColumnIndex(constant.ENTERTAIMENTS));
+            value = title;
+        }
+        cursor.close();
+        return value;
+    }
+    public int getFromDbSumHealth() {
+        int value = 0;
+        Cursor cursor = db.rawQuery("SELECT SUM(health) as health FROM " + constant.Table_Name, null);
+        while (cursor.moveToNext()) {
+            int title = cursor.getInt(cursor.getColumnIndex(constant.HEALTH));
+            value = title;
+        }
+        cursor.close();
+        return value;
+    }
+    public int getFromDbSumHousing() {
+        int value = 0;
+        Cursor cursor = db.rawQuery("SELECT SUM(housing) as housing FROM " + constant.Table_Name, null);
+        while (cursor.moveToNext()) {
+            int title = cursor.getInt(cursor.getColumnIndex(constant.HOUSING));
+            value = title;
+        }
+        cursor.close();
+        return value;
+    }
+    public int getFromDbSumFin_expenses() {
+        int value = 0;
+        Cursor cursor = db.rawQuery("SELECT SUM(fin_expenses) as fin_expenses FROM " + constant.Table_Name, null);
+        while (cursor.moveToNext()) {
+            int title = cursor.getInt(cursor.getColumnIndex(constant.FIN_EXPENSES));
+            value = title;
+        }
+        cursor.close();
+        return value;
+    }
+    public int getFromDbSumOther_ras() {
+        int value = 0;
+        Cursor cursor = db.rawQuery("SELECT SUM(other_ras) as other_ras FROM " + constant.Table_Name, null);
+        while (cursor.moveToNext()) {
+            int title = cursor.getInt(cursor.getColumnIndex(constant.OTHER1));
+            value = title;
+        }
+        cursor.close();
+        return value;
+    }
+    public int getFromDbSumSalary() {
+        int value = 0;
+        Cursor cursor = db.rawQuery("SELECT SUM(salary) as salary FROM " + constant.Table_Name, null);
+        while (cursor.moveToNext()) {
+            int title = cursor.getInt(cursor.getColumnIndex(constant.SALARY));
+            value = title;
+        }
+        cursor.close();
+        return value;
+    }
+    public int getFromDbSumInvest() {
+        int value = 0;
+        Cursor cursor = db.rawQuery("SELECT SUM(investment) as investment FROM " + constant.Table_Name, null);
+        while (cursor.moveToNext()) {
+            int title = cursor.getInt(cursor.getColumnIndex(constant.INVESTMENT));
+            value = title;
+        }
+        cursor.close();
+        return value;
+    }
+    public int getFromDbSumOther_dox() {
+        int value = 0;
+        Cursor cursor = db.rawQuery("SELECT SUM(other_dox) as other_dox FROM " + constant.Table_Name, null);
+        while (cursor.moveToNext()) {
+            int title = cursor.getInt(cursor.getColumnIndex(constant.OTHER2));
             value = title;
         }
         cursor.close();

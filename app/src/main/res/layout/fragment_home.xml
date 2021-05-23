@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragment_home"
     tools:context=".ui.home.HomeFragment">
 
 
@@ -25,7 +26,7 @@
 
     <TextView
         android:id="@+id/balance_m"
-        android:layout_width="89dp"
+        android:layout_width="200dp"
         android:layout_height="24dp"
         android:layout_marginStart="156dp"
         android:layout_marginTop="2dp"
@@ -33,7 +34,6 @@
         android:fontFamily="@font/amiko_bold"
         android:gravity="center"
         android:textColor="#000000"
-        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/balance_t" />
@@ -88,9 +88,9 @@
 
     <TextView
         android:id="@+id/balance_ras"
-        android:layout_width="89dp"
+        android:layout_width="150dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="104dp"
+        android:layout_marginEnd="60dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/amiko_bold"
         android:gravity="center"
@@ -101,9 +101,9 @@
 
     <TextView
         android:id="@+id/balance_dox"
-        android:layout_width="89dp"
+        android:layout_width="150dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="28dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/amiko_bold"
         android:gravity="center"
@@ -150,9 +150,9 @@
 
             <TextView
                 android:id="@+id/balance_food"
-                android:layout_width="72dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="125dp"
+                android:layout_marginStart="117dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/amiko_bold"
                 android:gravity="center"
@@ -176,7 +176,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/image_food"
                 app:srcCompat="@drawable/image_shopping" />
@@ -186,7 +186,7 @@
                 android:layout_width="95dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="13dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/allerta"
                 android:gravity="center|top"
                 android:text="Шоппинг"
@@ -197,10 +197,10 @@
 
             <TextView
                 android:id="@+id/balance_shopping"
-                android:layout_width="72dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="81dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/amiko_bold"
                 android:gravity="center"
                 android:textColor="#000000"
@@ -213,7 +213,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toEndOf="@+id/balance_food"
                 app:layout_constraintTop_toTopOf="@+id/add_food"
                 app:srcCompat="@drawable/image_add" />
@@ -223,7 +223,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/image_shopping"
                 app:srcCompat="@drawable/image_products" />
@@ -233,7 +233,7 @@
                 android:layout_width="95dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="13dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/allerta"
                 android:gravity="center|top"
                 android:text="Продукты"
@@ -244,10 +244,10 @@
 
             <TextView
                 android:id="@+id/balance_products"
-                android:layout_width="72dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="81dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/amiko_bold"
                 android:gravity="center"
                 android:textColor="#000000"
@@ -260,7 +260,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toEndOf="@+id/balance_shopping"
                 app:layout_constraintTop_toTopOf="@+id/add_shopping"
                 app:srcCompat="@drawable/image_add" />
@@ -270,7 +270,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/image_products"
                 app:srcCompat="@drawable/image_transport" />
@@ -280,7 +280,7 @@
                 android:layout_width="95dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="13dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/allerta"
                 android:gravity="center|top"
                 android:text="Транспорт"
@@ -291,10 +291,10 @@
 
             <TextView
                 android:id="@+id/balance_transport"
-                android:layout_width="72dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="81dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/amiko_bold"
                 android:gravity="center"
                 android:textColor="#000000"
@@ -307,7 +307,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toEndOf="@+id/balance_products"
                 app:layout_constraintTop_toTopOf="@+id/add_products"
                 app:srcCompat="@drawable/image_add" />
@@ -317,7 +317,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/image_transport"
                 app:srcCompat="@drawable/image_enter" />
@@ -327,7 +327,7 @@
                 android:layout_width="115dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="13dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/allerta"
                 android:gravity="center|top"
                 android:text="Развлечения"
@@ -338,10 +338,10 @@
 
             <TextView
                 android:id="@+id/balance_entertainments"
-                android:layout_width="72dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="61dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginStart="53dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/amiko_bold"
                 android:gravity="center"
                 android:textColor="#000000"
@@ -354,7 +354,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toEndOf="@+id/balance_transport"
                 app:layout_constraintTop_toTopOf="@+id/add_trasnport"
                 app:srcCompat="@drawable/image_add" />
@@ -364,7 +364,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/image_entertainments"
                 app:srcCompat="@drawable/image_health" />
@@ -374,7 +374,7 @@
                 android:layout_width="95dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="13dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/allerta"
                 android:gravity="center|top"
                 android:text="Здоровье"
@@ -385,10 +385,10 @@
 
             <TextView
                 android:id="@+id/balance_health"
-                android:layout_width="72dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="81dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/amiko_bold"
                 android:gravity="center"
                 android:textColor="#000000"
@@ -401,7 +401,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toEndOf="@+id/balance_entertainments"
                 app:layout_constraintTop_toTopOf="@+id/add_entertainments"
                 app:srcCompat="@drawable/image_add" />
@@ -411,7 +411,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/image_health"
                 app:srcCompat="@drawable/image_housing" />
@@ -421,7 +421,7 @@
                 android:layout_width="75dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="13dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/allerta"
                 android:gravity="center|top"
                 android:text="Жилье"
@@ -432,10 +432,10 @@
 
             <TextView
                 android:id="@+id/balance_housing"
-                android:layout_width="72dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="101dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginStart="93dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/amiko_bold"
                 android:gravity="center"
                 android:textColor="#000000"
@@ -448,7 +448,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toEndOf="@+id/balance_health"
                 app:layout_constraintTop_toTopOf="@+id/add_health"
                 app:srcCompat="@drawable/image_add" />
@@ -458,17 +458,17 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/image_housing"
-                app:srcCompat="@drawable/image_fin_expenses" />
+                app:srcCompat="@drawable/fin_exp" />
 
             <TextView
                 android:id="@+id/text_fin_expenses"
                 android:layout_width="125dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="13dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/allerta"
                 android:gravity="center|top"
                 android:text="Фин. расходы"
@@ -479,10 +479,10 @@
 
             <TextView
                 android:id="@+id/balance_fin_expenses"
-                android:layout_width="72dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="51dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/amiko_bold"
                 android:gravity="center"
                 android:textColor="#000000"
@@ -495,7 +495,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toEndOf="@+id/balance_housing"
                 app:layout_constraintTop_toTopOf="@+id/add_housing"
                 app:srcCompat="@drawable/image_add" />
@@ -505,7 +505,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/image_fin_expenses"
                 app:srcCompat="@drawable/image_other" />
@@ -515,7 +515,7 @@
                 android:layout_width="135dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="13dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/allerta"
                 android:gravity="center|top"
                 android:text=" Другое Расход"
@@ -526,10 +526,10 @@
 
             <TextView
                 android:id="@+id/balance_other_ras"
-                android:layout_width="72dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="41dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/amiko_bold"
                 android:gravity="center"
                 android:textColor="#000000"
@@ -542,7 +542,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toEndOf="@+id/balance_fin_expenses"
                 app:layout_constraintTop_toTopOf="@+id/add_fin_expenses"
                 app:srcCompat="@drawable/image_add" />
@@ -552,7 +552,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/image_other_ras"
                 app:srcCompat="@drawable/image_salary" />
@@ -562,7 +562,7 @@
                 android:layout_width="90dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="13dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/allerta"
                 android:gravity="center|top"
                 android:text="Зарплата"
@@ -573,10 +573,10 @@
 
             <TextView
                 android:id="@+id/balance_salary"
-                android:layout_width="72dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="86dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginStart="78dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/amiko_bold"
                 android:gravity="center"
                 android:textColor="#000000"
@@ -589,7 +589,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintStart_toEndOf="@+id/balance_other_ras"
                 app:layout_constraintTop_toTopOf="@+id/add_other_ras"
@@ -600,7 +600,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/image_salary"
                 app:srcCompat="@drawable/image_invest" />
@@ -610,7 +610,7 @@
                 android:layout_width="105dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="13dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/allerta"
                 android:gravity="center|top"
                 android:text="Инвестиции"
@@ -621,10 +621,10 @@
 
             <TextView
                 android:id="@+id/balance_investment"
-                android:layout_width="72dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="71dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginStart="63dp"
+                android:layout_marginTop="45dp"
                 android:fontFamily="@font/amiko_bold"
                 android:gravity="center"
                 android:textColor="#000000"
@@ -637,7 +637,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintStart_toEndOf="@+id/balance_salary"
                 app:layout_constraintTop_toTopOf="@+id/add_salary"
@@ -648,7 +648,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginBottom="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -660,7 +660,7 @@
                 android:layout_width="120dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="13dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/allerta"
                 android:gravity="center|top"
@@ -673,10 +673,10 @@
 
             <TextView
                 android:id="@+id/balance_other_dox"
-                android:layout_width="72dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="56dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/amiko_bold"
                 android:gravity="center"
@@ -691,7 +691,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginBottom="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/balance_investment"
@@ -702,10 +702,5 @@
 
 
     </ScrollView>
-
-    <FrameLayout
-        android:id="@+id/frgmCont"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

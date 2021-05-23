@@ -7,4 +7,5 @@
     <color name="but_not_press_rasx">#40FF0000</color>
     <color name="but_not_press_dox">#40008000</color>
     <color name="but_press_dox">#008000</color>
+    <color name="colorBlue">#0071bc</color>
 </resources>
