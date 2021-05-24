@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
         doxod = (Button)view.findViewById(R.id.doxod);
         balance_ras=(TextView) view.findViewById(R.id.balance_ras);
         balance_dox=(TextView) view.findViewById(R.id.balance_dox);
-        balance_m=(TextView)view.findViewById(R.id.balance_m);
+        balance_m=(TextView)view.findViewById(R.id.balance_m2);
         balance_food=(TextView) view.findViewById(R.id.balance_food);
         balance_shopping=(TextView) view.findViewById(R.id.balance_shopping);
         balance_products=(TextView) view.findViewById(R.id.balance_products);

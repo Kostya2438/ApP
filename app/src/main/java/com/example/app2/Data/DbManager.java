@@ -148,17 +148,6 @@ public class DbManager {
         }
     }
 
-    public List<String> getFromDb() {
-        List<String> templist = new ArrayList<>();
-        Cursor cursor = db.query(constant.Table_Name, null, null, null,
-                null, null, null);
-        while (cursor.moveToNext()) {
-            String title = cursor.getString(cursor.getColumnIndex(constant.FOOD));
-            templist.add(title);
-        }
-        cursor.close();
-        return templist;
-    }
     public int getFromDbSumRasxod() {
         int value = 0;
         Cursor cursor = db.rawQuery("SELECT SUM(sum_ras) as sum_ras FROM " + constant.Table_Name, null);
