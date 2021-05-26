@@ -48,6 +48,12 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        final SharedPreferences sp = this.getActivity().getSharedPreferences(APP_PREFERENCES,
+                MODE_PRIVATE);
+        sharedPrefs=this.getActivity().getSharedPreferences(APP_PREFERENCES,MODE_PRIVATE);
+        final SharedPreferences.Editor e = sp.edit();
+        e.putInt("category",0);
+        e.apply();
         rasxod = (Button)view.findViewById(R.id.rasxod);
         doxod = (Button)view.findViewById(R.id.doxod);
         balance_ras=(TextView) view.findViewById(R.id.balance_ras);
@@ -94,12 +100,6 @@ public class HomeFragment extends Fragment {
         balance_salary.setText(String.valueOf(dbManager.getFromDbSumSalary())+" Р");
         balance_invest.setText(String.valueOf(dbManager.getFromDbSumInvest())+" Р");
         balance_other_dox.setText(String.valueOf(dbManager.getFromDbSumOther_dox())+" Р");
-        final SharedPreferences sp = this.getActivity().getSharedPreferences(APP_PREFERENCES,
-                MODE_PRIVATE);
-        sharedPrefs=this.getActivity().getSharedPreferences(APP_PREFERENCES,MODE_PRIVATE);
-        final SharedPreferences.Editor e = sp.edit();
-        e.putInt("category",0);
-        e.commit();
         final Intent intent = new Intent(HomeFragment.this.getActivity(), AddEntry.class);
         View.OnClickListener lis=new View.OnClickListener() {
                         @Override

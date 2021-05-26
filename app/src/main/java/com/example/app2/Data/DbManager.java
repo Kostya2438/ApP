@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class DbManager {
@@ -147,6 +148,27 @@ public class DbManager {
                 break;
         }
     }
+
+    public void insectToDbOther(int x,int value){
+        ContentValues cv = new ContentValues();
+        switch (x) {
+            case 1:
+                cv.put(constant.SUM_ALL, value);
+                db.insert(constant.Table_Name, null, cv);
+                cv.clear();
+                cv.put(constant.SUM_RAS, -value);
+                db.insert(constant.Table_Name, null, cv);
+                break;
+            case 2:
+                cv.put(constant.SUM_ALL, -value);
+                db.insert(constant.Table_Name, null, cv);
+                cv.clear();
+                cv.put(constant.SUM_DOX, -value);
+                db.insert(constant.Table_Name, null, cv);
+                break;
+        }
+    }
+
 
     public int getFromDbSumRasxod() {
         int value = 0;
@@ -297,6 +319,169 @@ public class DbManager {
         }
         cursor.close();
         return value;
+    }
+
+    public HashMap<Integer,Integer> getFromDbOperationsFood(){
+        List<Integer> temp = new ArrayList<>();
+        HashMap<Integer,Integer> user = new HashMap<Integer,Integer>();
+        Cursor cursor = db.rawQuery("SELECT food as food,_id FROM "+constant.Table_Name+" WHERE food>0",null);
+        while(cursor.moveToNext()){
+            int til = cursor.getInt(cursor.getColumnIndex(constant.FOOD));
+            int tel = cursor.getInt(cursor.getColumnIndex(constant._ID));
+            temp.add(til);
+            user.put(tel,til);
+        }
+        cursor.close();
+        return user;
+    }
+
+    public HashMap<Integer,Integer> getFromDbOperationsShopping(){
+        List<Integer> temp = new ArrayList<>();
+        HashMap<Integer,Integer> user = new HashMap<Integer,Integer>();
+        Cursor cursor = db.rawQuery("SELECT shopping as shopping,_id FROM "+constant.Table_Name+" WHERE shopping>0",null);
+        while(cursor.moveToNext()){
+            int til = cursor.getInt(cursor.getColumnIndex(constant.SHOPPING));
+            int tel = cursor.getInt(cursor.getColumnIndex(constant._ID));
+            temp.add(til);
+            user.put(tel,til);
+        }
+        cursor.close();
+        return user;
+    }
+
+    public HashMap<Integer,Integer> getFromDbOperationsProducts(){
+        List<Integer> temp = new ArrayList<>();
+        HashMap<Integer,Integer> user = new HashMap<Integer,Integer>();
+        Cursor cursor = db.rawQuery("SELECT products as products,_id FROM "+constant.Table_Name+" WHERE products>0",null);
+        while(cursor.moveToNext()){
+            int til = cursor.getInt(cursor.getColumnIndex(constant.PRODUCTS));
+            int tel = cursor.getInt(cursor.getColumnIndex(constant._ID));
+            temp.add(til);
+            user.put(tel,til);
+        }
+        cursor.close();
+        return user;
+    }
+
+    public HashMap<Integer,Integer> getFromDbOperationsTransport(){
+        List<Integer> temp = new ArrayList<>();
+        HashMap<Integer,Integer> user = new HashMap<Integer,Integer>();
+        Cursor cursor = db.rawQuery("SELECT transport as transport,_id FROM "+constant.Table_Name+" WHERE transport>0",null);
+        while(cursor.moveToNext()){
+            int til = cursor.getInt(cursor.getColumnIndex(constant.TRANSPORT));
+            int tel = cursor.getInt(cursor.getColumnIndex(constant._ID));
+            temp.add(til);
+            user.put(tel,til);
+        }
+        cursor.close();
+        return user;
+    }
+    public HashMap<Integer,Integer> getFromDbOperationsEnter(){
+        List<Integer> temp = new ArrayList<>();
+        HashMap<Integer,Integer> user = new HashMap<Integer,Integer>();
+        Cursor cursor = db.rawQuery("SELECT entertainments as entertainments,_id FROM "+constant.Table_Name+" WHERE entertainments>0",null);
+        while(cursor.moveToNext()){
+            int til = cursor.getInt(cursor.getColumnIndex(constant.ENTERTAIMENTS));
+            int tel = cursor.getInt(cursor.getColumnIndex(constant._ID));
+            temp.add(til);
+            user.put(tel,til);
+        }
+        cursor.close();
+        return user;
+    }
+    public HashMap<Integer,Integer> getFromDbOperationsHealth(){
+        List<Integer> temp = new ArrayList<>();
+        HashMap<Integer,Integer> user = new HashMap<Integer,Integer>();
+        Cursor cursor = db.rawQuery("SELECT health as health,_id FROM "+constant.Table_Name+" WHERE health>0",null);
+        while(cursor.moveToNext()){
+            int til = cursor.getInt(cursor.getColumnIndex(constant.HEALTH));
+            int tel = cursor.getInt(cursor.getColumnIndex(constant._ID));
+            temp.add(til);
+            user.put(tel,til);
+        }
+        cursor.close();
+        return user;
+    }
+    public HashMap<Integer,Integer> getFromDbOperationsHousing(){
+        List<Integer> temp = new ArrayList<>();
+        HashMap<Integer,Integer> user = new HashMap<Integer,Integer>();
+        Cursor cursor = db.rawQuery("SELECT housing as housing,_id FROM "+constant.Table_Name+" WHERE housing>0",null);
+        while(cursor.moveToNext()){
+            int til = cursor.getInt(cursor.getColumnIndex(constant.HOUSING));
+            int tel = cursor.getInt(cursor.getColumnIndex(constant._ID));
+            temp.add(til);
+            user.put(tel,til);
+        }
+        cursor.close();
+        return user;
+    }
+    public HashMap<Integer,Integer> getFromDbOperationsFin_ex(){
+        List<Integer> temp = new ArrayList<>();
+        HashMap<Integer,Integer> user = new HashMap<Integer,Integer>();
+        Cursor cursor = db.rawQuery("SELECT fin_expenses as fin_expenses,_id FROM "+constant.Table_Name+" WHERE fin_expenses>0",null);
+        while(cursor.moveToNext()){
+            int til = cursor.getInt(cursor.getColumnIndex(constant.FIN_EXPENSES));
+            int tel = cursor.getInt(cursor.getColumnIndex(constant._ID));
+            temp.add(til);
+            user.put(tel,til);
+        }
+        cursor.close();
+        return user;
+    }
+    public HashMap<Integer,Integer> getFromDbOperationsOther_ras(){
+        List<Integer> temp = new ArrayList<>();
+        HashMap<Integer,Integer> user = new HashMap<Integer,Integer>();
+        Cursor cursor = db.rawQuery("SELECT other_ras as other_ras,_id FROM "+constant.Table_Name+" WHERE other_ras>0",null);
+        while(cursor.moveToNext()){
+            int til = cursor.getInt(cursor.getColumnIndex(constant.OTHER1));
+            int tel = cursor.getInt(cursor.getColumnIndex(constant._ID));
+            temp.add(til);
+            user.put(tel,til);
+        }
+        cursor.close();
+        return user;
+    }
+    public HashMap<Integer,Integer> getFromDbOperationsSalary(){
+        List<Integer> temp = new ArrayList<>();
+        HashMap<Integer,Integer> user = new HashMap<Integer,Integer>();
+        Cursor cursor = db.rawQuery("SELECT salary as salary,_id FROM "+constant.Table_Name+" WHERE salary>0",null);
+        while(cursor.moveToNext()){
+            int til = cursor.getInt(cursor.getColumnIndex(constant.SALARY));
+            int tel = cursor.getInt(cursor.getColumnIndex(constant._ID));
+            temp.add(til);
+            user.put(tel,til);
+        }
+        cursor.close();
+        return user;
+    }
+    public HashMap<Integer,Integer> getFromDbOperationsInvest(){
+        List<Integer> temp = new ArrayList<>();
+        HashMap<Integer,Integer> user = new HashMap<Integer,Integer>();
+        Cursor cursor = db.rawQuery("SELECT investment as investment,_id FROM "+constant.Table_Name+" WHERE investment>0",null);
+        while(cursor.moveToNext()){
+            int til = cursor.getInt(cursor.getColumnIndex(constant.INVESTMENT));
+            int tel = cursor.getInt(cursor.getColumnIndex(constant._ID));
+            temp.add(til);
+            user.put(tel,til);
+        }
+        cursor.close();
+        return user;
+    }
+    public HashMap<Integer,Integer> getFromDbOperationsOther_dox(){
+        List<Integer> temp = new ArrayList<>();
+        HashMap<Integer,Integer> user = new HashMap<Integer,Integer>();
+        Cursor cursor = db.rawQuery("SELECT other_dox as other_dox,_id FROM "+constant.Table_Name+" WHERE other_dox>0",null);
+        while(cursor.moveToNext()){
+            int til = cursor.getInt(cursor.getColumnIndex(constant.OTHER2));
+            int tel = cursor.getInt(cursor.getColumnIndex(constant._ID));
+            temp.add(til);
+            user.put(tel,til);
+        }
+        cursor.close();
+        return user;
+    }
+    public void deleteFromDb(int id){
+        db.execSQL("DELETE FROM "+constant.Table_Name+" WHERE _id = "+id);
     }
     public void closeDb(){
         dataBaseHelper.close();

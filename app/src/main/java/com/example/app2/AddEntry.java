@@ -34,7 +34,6 @@ public class AddEntry extends AppCompatActivity {
     private Button[] buttons = new Button[10];
     private float oldNumber;
     private char operation = '0';
-    HomeFragment homeFragment = new HomeFragment();
     TextView category,category_1;
     ImageView image_cat;
     public static final String APP_PREFERENCES = "mysettings";
@@ -56,7 +55,6 @@ public class AddEntry extends AppCompatActivity {
         final SharedPreferences sp = getSharedPreferences(APP_PREFERENCES,
                 MODE_PRIVATE);
         sharedPrefs = getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE);
-        int categoty = sp.getInt("categoty", 0);
         final Bundle arguments = getIntent().getExtras();
         final SharedPreferences.Editor e = sp.edit();
         if (sp.getInt("category", 0) == 1) {
@@ -114,7 +112,6 @@ public class AddEntry extends AppCompatActivity {
                 category_1.setText("Другое Доходы");
                 break;
         }
-
         View.OnClickListener lis=new View.OnClickListener() {
             @Override
             public void onClick(View v) {
