@@ -11,24 +11,22 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
     public static final String APP_PREFERENCES = "mysettings";
-    private SharedPreferences sharedPrefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final SharedPreferences sp = getSharedPreferences(APP_PREFERENCES,
                 Context.MODE_PRIVATE);
-        sharedPrefs=getSharedPreferences(APP_PREFERENCES,MODE_PRIVATE);
         Thread thread = new Thread() {
             @Override
             public void run() {
                 try {
-                    TimeUnit.SECONDS.sleep(3);
+                    TimeUnit.SECONDS.sleep(2);
                     boolean hasVisited = sp.getBoolean("hasVisited", true);
-                    if (!hasVisited) {
+                    if (hasVisited) {
                         SharedPreferences.Editor e = sp.edit();
-                        if (!sharedPrefs.getBoolean("hasVisited",true)) {
-                            e.putBoolean("hasVisited", true);
+                        if (sp.getBoolean("hasVisited",true)) {
+                            e.putBoolean("hasVisited", false);
                             e.commit();
                         }
                         Intent intent2 = new Intent(MainActivity.this, Startscreen.class);

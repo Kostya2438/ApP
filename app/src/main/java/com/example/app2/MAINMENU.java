@@ -41,10 +41,11 @@ public class MAINMENU extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.m_a_i_n_m_e_n_u, menu);
         return true;
     }
+    @Override
+    public void onBackPressed(){}
 
     @Override
     public boolean onSupportNavigateUp() {

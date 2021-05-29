@@ -26,4 +26,7 @@ public class Startscreen extends AppCompatActivity {
         };
         button_start.setOnClickListener(listener);
     }
+
+    @Override
+    public void onBackPressed(){}
 }

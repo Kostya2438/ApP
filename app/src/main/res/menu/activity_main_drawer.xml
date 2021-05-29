@@ -20,20 +20,4 @@
             android:icon="@drawable/menu_account"
             android:title="@string/menu_bill" />
     </group>
-    <group
-        android:id="@+id/group2"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_goal"
-            android:icon="@drawable/menu_goal"
-            android:title="@string/menu_goal" />
-        <item
-            android:id="@+id/nav_debt"
-            android:icon="@drawable/menu_debt"
-            android:title="@string/menu_debt" />
-        <item
-            android:id="@+id/nav_shop"
-            android:icon="@drawable/menu_shop"
-            android:title="@string/menu_shop" />
-    </group>
 </menu>
